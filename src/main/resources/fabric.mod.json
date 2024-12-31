@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "dyefulmod",
+	"version": "${version}",
+	"name": "Dyeful",
+	"description": "Have you ever thought, there just aren't enough colors? Well, you're in luck, as this mod aims to fix that with a bunch more dye colors, and blocks to boot!",
+	"authors": [
+		"Archangel_Toast"
+	],
+	"contact": {
+		"homepage": "",
+		"sources": "https://github.com/LightlyToastedAngel/Dyeful-Fabric-1.21.4"
+	},
+	"license": "MIT",
+	"icon": "assets/dyefulmod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.toast.dyefulmod.Dyeful"
+		],
+		"fabric-datagen": [
+			"net.toast.dyefulmod.DyefulDataGenerator"
+		],
+		"client": [
+			"net.toast.dyefulmod.DyefulClient"
+		]
+	},
+	"mixins": [
+		"dyefulmod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.9",
+		"minecraft": "~1.21.4",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
