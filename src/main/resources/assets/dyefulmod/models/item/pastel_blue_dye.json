@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "dyefulmod:item/pastel_blue_dye"
+  }
+}

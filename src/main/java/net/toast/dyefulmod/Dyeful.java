@@ -2,6 +2,8 @@ package net.toast.dyefulmod;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.toast.dyefulmod.block.ModBlocks;
+import net.toast.dyefulmod.item.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -11,6 +13,7 @@ public class Dyeful implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-
+		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
 	}
 }
