@@ -1,0 +1,236 @@
+---- Minecraft Crash Report ----
+// Uh... Did I do that?
+
+Time: 2025-01-01 17:14:47
+Description: Unexpected error
+
+java.lang.IllegalArgumentException: Cannot add empty stack
+	at knot//net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries.checkStack(FabricItemGroupEntries.java:500)
+	at knot//net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries.add(FabricItemGroupEntries.java:90)
+	at knot//net.minecraft.item.ItemGroup$Entries.add(ItemGroup.java:218)
+	at knot//net.toast.dyefulmod.block.ModBlocks.lambda$registerModBlocks$1(ModBlocks.java:51)
+	at knot//net.fabricmc.fabric.impl.itemgroup.ItemGroupEventsImpl.lambda$createModifyEvent$1(ItemGroupEventsImpl.java:46)
+	at knot//net.minecraft.item.ItemGroup.handler$zjn000$fabric-item-group-api-v1$getStacks(ItemGroup.java:1079)
+	at knot//net.minecraft.item.ItemGroup.updateEntries(ItemGroup.java:112)
+	at knot//net.minecraft.item.ItemGroups.method_47338(ItemGroups.java:1976)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1939)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at knot//net.minecraft.item.ItemGroups.updateEntries(ItemGroups.java:1976)
+	at knot//net.minecraft.item.ItemGroups.updateDisplayContext(ItemGroups.java:1985)
+	at knot//net.minecraft.client.gui.screen.ingame.CreativeInventoryScreen.populateDisplay(CreativeInventoryScreen.java:155)
+	at knot//net.minecraft.client.gui.screen.ingame.CreativeInventoryScreen.<init>(CreativeInventoryScreen.java:126)
+	at knot//net.minecraft.client.gui.screen.ingame.InventoryScreen.init(InventoryScreen.java:51)
+	at knot//net.minecraft.client.gui.screen.Screen.init(Screen.java:327)
+	at knot//net.minecraft.client.MinecraftClient.setScreen(MinecraftClient.java:1190)
+	at knot//net.minecraft.client.MinecraftClient.handleInputEvents(MinecraftClient.java:1984)
+	at knot//net.minecraft.client.MinecraftClient.tick(MinecraftClient.java:1846)
+	at knot//net.minecraft.client.MinecraftClient.render(MinecraftClient.java:1301)
+	at knot//net.minecraft.client.MinecraftClient.run(MinecraftClient.java:930)
+	at knot//net.minecraft.client.main.Main.main(Main.java:240)
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:480)
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:74)
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23)
+	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Render thread
+Stacktrace:
+	at knot//net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries.checkStack(FabricItemGroupEntries.java:500)
+	at knot//net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries.add(FabricItemGroupEntries.java:90)
+	at knot//net.minecraft.item.ItemGroup$Entries.add(ItemGroup.java:218)
+	at knot//net.toast.dyefulmod.block.ModBlocks.lambda$registerModBlocks$1(ModBlocks.java:51)
+	at knot//net.fabricmc.fabric.impl.itemgroup.ItemGroupEventsImpl.lambda$createModifyEvent$1(ItemGroupEventsImpl.java:46)
+	at knot//net.minecraft.item.ItemGroup.handler$zjn000$fabric-item-group-api-v1$getStacks(ItemGroup.java:1079)
+	at knot//net.minecraft.item.ItemGroup.updateEntries(ItemGroup.java:112)
+	at knot//net.minecraft.item.ItemGroups.method_47338(ItemGroups.java:1976)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184)
+	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:179)
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1939)
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509)
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499)
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151)
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174)
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596)
+	at knot//net.minecraft.item.ItemGroups.updateEntries(ItemGroups.java:1976)
+	at knot//net.minecraft.item.ItemGroups.updateDisplayContext(ItemGroups.java:1985)
+	at knot//net.minecraft.client.gui.screen.ingame.CreativeInventoryScreen.populateDisplay(CreativeInventoryScreen.java:155)
+	at knot//net.minecraft.client.gui.screen.ingame.CreativeInventoryScreen.<init>(CreativeInventoryScreen.java:126)
+	at knot//net.minecraft.client.gui.screen.ingame.InventoryScreen.init(InventoryScreen.java:51)
+	at knot//net.minecraft.client.gui.screen.Screen.init(Screen.java:327)
+	at knot//net.minecraft.client.MinecraftClient.setScreen(MinecraftClient.java:1190)
+	at knot//net.minecraft.client.MinecraftClient.handleInputEvents(MinecraftClient.java:1984)
+
+-- Uptime --
+Details:
+	JVM uptime: 27.922s
+	Wall uptime: 17.498s
+	High-res time: 16.178s
+	Client ticks: 194 ticks / 9.700s
+Stacktrace:
+	at knot//net.minecraft.client.MinecraftClient.addDetailsToCrashReport(MinecraftClient.java:2355)
+	at knot//net.minecraft.client.MinecraftClient.printCrashReport(MinecraftClient.java:994)
+	at knot//net.minecraft.client.MinecraftClient.run(MinecraftClient.java:953)
+	at knot//net.minecraft.client.main.Main.main(Main.java:240)
+	at net.fabricmc.loader.impl.game.minecraft.MinecraftGameProvider.launch(MinecraftGameProvider.java:480)
+	at net.fabricmc.loader.impl.launch.knot.Knot.launch(Knot.java:74)
+	at net.fabricmc.loader.impl.launch.knot.KnotClient.main(KnotClient.java:23)
+	at net.fabricmc.devlaunchinjector.Main.main(Main.java:86)
+
+-- Affected level --
+Details:
+	All players: 1 total; [ClientPlayerEntity['Player1'/14, l='ClientLevel', x=17.76, y=71.26, z=143.27]]
+	Chunk stats: 5041, 1230
+	Level dimension: minecraft:overworld
+	Level spawn location: World: (0,71,0), Section: (at 0,7,0 in 0,4,0; chunk contains blocks 0,-64,0 to 15,319,15), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,-64,0 to 511,319,511)
+	Level time: 24076 game time, 13101 day time
+	Server brand: fabric
+	Server type: Integrated singleplayer server
+	Tracked entity count: 125
+
+-- Last reload --
+Details:
+	Reload number: 1
+	Reload reason: initial
+	Finished: Yes
+	Packs: vanilla, fabric, dyefulmod, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-view-api-v2, fabric-blockrenderlayer-v1, fabric-client-gametest-api-v1, fabric-client-tags-api-v1, fabric-command-api-v1, fabric-command-api-v2, fabric-commands-v0, fabric-content-registries-v0, fabric-convention-tags-v1, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-gametest-api-v1, fabric-item-api-v1, fabric-item-group-api-v1, fabric-key-binding-api-v1, fabric-keybindings-v0, fabric-lifecycle-events-v1, fabric-loot-api-v2, fabric-loot-api-v3, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-rendering-data-attachment-v1, fabric-rendering-fluids-v1, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-screen-api-v1, fabric-screen-handler-api-v1, fabric-sound-api-v1, fabric-tag-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, file/Default-Dark-Mode-1.20.2+-2024.6.0.zip, file/No Vignette 1.21.zip, file/NoBlurAndLowFire-1.21.zip, file/RemoveFog_1.21~1.21.1-1.1.zip, file/Slightly-Improved-Font-1.1.4.zip, file/Toast-Blue-Totem
+
+-- System Details --
+Details:
+	Minecraft Version: 1.21.4
+	Minecraft Version ID: 1.21.4
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 21.0.3, Eclipse Adoptium
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Eclipse Adoptium
+	Memory: 1513323120 bytes (1443 MiB) / 2269118464 bytes (2164 MiB) up to 8573157376 bytes (8176 MiB)
+	CPUs: 16
+	Processor Vendor: AuthenticAMD
+	Processor Name: AMD Ryzen 7 5800X 8-Core Processor             
+	Identifier: AuthenticAMD Family 25 Model 33 Stepping 0
+	Microarchitecture: Zen 3
+	Frequency (GHz): 3.80
+	Number of physical packages: 1
+	Number of physical CPUs: 8
+	Number of logical CPUs: 16
+	Graphics card #0 name: NVIDIA GeForce RTX 3060
+	Graphics card #0 vendor: NVIDIA
+	Graphics card #0 VRAM (MiB): 12288.00
+	Graphics card #0 deviceId: VideoController1
+	Graphics card #0 versionInfo: 32.0.15.6094
+	Memory slot #0 capacity (MiB): 8192.00
+	Memory slot #0 clockSpeed (GHz): 3.60
+	Memory slot #0 type: DDR4
+	Memory slot #1 capacity (MiB): 8192.00
+	Memory slot #1 clockSpeed (GHz): 3.60
+	Memory slot #1 type: DDR4
+	Memory slot #2 capacity (MiB): 8192.00
+	Memory slot #2 clockSpeed (GHz): 3.60
+	Memory slot #2 type: DDR4
+	Memory slot #3 capacity (MiB): 8192.00
+	Memory slot #3 clockSpeed (GHz): 3.60
+	Memory slot #3 type: DDR4
+	Virtual memory max (MiB): 45192.75
+	Virtual memory used (MiB): 40194.13
+	Swap memory total (MiB): 12498.67
+	Swap memory used (MiB): 1623.57
+	Space in storage for jna.tmpdir (MiB): <path not set>
+	Space in storage for org.lwjgl.system.SharedLibraryExtractPath (MiB): <path not set>
+	Space in storage for io.netty.native.workdir (MiB): <path not set>
+	Space in storage for java.io.tmpdir (MiB): available: 978823.56, total: 1907727.00
+	Space in storage for workdir (MiB): available: 978823.56, total: 1907727.00
+	JVM Flags: 0 total; 
+	Fabric Mods: 
+		dyefulmod: Dyeful 1.0.0
+		fabric-api: Fabric API 0.114.0+1.21.4
+		fabric-api-base: Fabric API Base 0.4.54+b47eab6b04
+		fabric-api-lookup-api-v1: Fabric API Lookup API (v1) 1.6.86+b1caf1e904
+		fabric-biome-api-v1: Fabric Biome API (v1) 15.0.6+b1c29d8e04
+		fabric-block-api-v1: Fabric Block API (v1) 1.0.31+7feeb73304
+		fabric-block-view-api-v2: Fabric BlockView API (v2) 1.0.19+7feeb73304
+		fabric-blockrenderlayer-v1: Fabric BlockRenderLayer Registration (v1) 2.0.8+7feeb73304
+		fabric-client-gametest-api-v1: Fabric Client Game Test API (v1) 3.0.0+1f6471e604
+		fabric-client-tags-api-v1: Fabric Client Tags 1.1.29+20ea1e2304
+		fabric-command-api-v1: Fabric Command API (v1) 1.2.62+f71b366f04
+		fabric-command-api-v2: Fabric Command API (v2) 2.2.41+e496eb1504
+		fabric-commands-v0: Fabric Commands (v0) 0.2.79+df3654b304
+		fabric-content-registries-v0: Fabric Content Registries (v0) 9.1.14+7feeb73304
+		fabric-convention-tags-v1: Fabric Convention Tags 2.1.11+7f945d5b04
+		fabric-convention-tags-v2: Fabric Convention Tags (v2) 2.10.1+e7d3c6e504
+		fabric-crash-report-info-v1: Fabric Crash Report Info (v1) 0.3.6+7feeb73304
+		fabric-data-attachment-api-v1: Fabric Data Attachment API (v1) 1.4.6+9aea556b04
+		fabric-data-generation-api-v1: Fabric Data Generation API (v1) 22.2.4+20ea1e2304
+		fabric-dimensions-v1: Fabric Dimensions API (v1) 4.0.10+7feeb73304
+		fabric-entity-events-v1: Fabric Entity Events (v1) 2.0.12+60fccc7604
+		fabric-events-interaction-v0: Fabric Events Interaction (v0) 4.0.2+a4eebcf004
+		fabric-game-rule-api-v1: Fabric Game Rule API (v1) 1.0.62+7feeb73304
+		fabric-gametest-api-v1: Fabric Game Test API (v1) 2.0.21+7feeb73304
+		fabric-item-api-v1: Fabric Item API (v1) 11.1.14+203e6b2304
+		fabric-item-group-api-v1: Fabric Item Group API (v1) 4.1.23+7feeb73304
+		fabric-key-binding-api-v1: Fabric Key Binding API (v1) 1.0.56+7feeb73304
+		fabric-keybindings-v0: Fabric Key Bindings (v0) 0.2.54+df3654b304
+		fabric-lifecycle-events-v1: Fabric Lifecycle Events (v1) 2.5.4+bf2a60eb04
+		fabric-loot-api-v2: Fabric Loot API (v2) 3.0.33+3f89f5a504
+		fabric-loot-api-v3: Fabric Loot API (v3) 1.0.21+203e6b2304
+		fabric-message-api-v1: Fabric Message API (v1) 6.0.25+7feeb73304
+		fabric-model-loading-api-v1: Fabric Model Loading API (v1) 4.2.0+8ca2ae8d04
+		fabric-networking-api-v1: Fabric Networking API (v1) 4.3.9+f371ccb904
+		fabric-object-builder-api-v1: Fabric Object Builder API (v1) 18.0.8+d70d2c0604
+		fabric-particles-v1: Fabric Particles (v1) 4.0.14+7feeb73304
+		fabric-recipe-api-v1: Fabric Recipe API (v1) 8.0.6+9ceeb58c04
+		fabric-registry-sync-v0: Fabric Registry Sync (v0) 6.1.3+e7d3c6e504
+		fabric-renderer-api-v1: Fabric Renderer API (v1) 5.0.2+84404cdd04
+		fabric-renderer-indigo: Fabric Renderer - Indigo 2.0.2+84404cdd04
+		fabric-rendering-data-attachment-v1: Fabric Rendering Data Attachment (v1) 0.3.57+73761d2e04
+		fabric-rendering-fluids-v1: Fabric Rendering Fluids (v1) 3.1.19+7feeb73304
+		fabric-rendering-v1: Fabric Rendering (v1) 10.1.2+b874120c04
+		fabric-resource-conditions-api-v1: Fabric Resource Conditions API (v1) 5.0.13+203e6b2304
+		fabric-resource-loader-v0: Fabric Resource Loader (v0) 3.0.11+b1caf1e904
+		fabric-screen-api-v1: Fabric Screen API (v1) 2.0.38+7feeb73304
+		fabric-screen-handler-api-v1: Fabric Screen Handler API (v1) 1.3.110+7feeb73304
+		fabric-sound-api-v1: Fabric Sound API (v1) 1.0.32+7feeb73304
+		fabric-tag-api-v1: Fabric Tag API (v1) 1.0.2+20ea1e2304
+		fabric-transfer-api-v1: Fabric Transfer API (v1) 5.4.9+efa825c904
+		fabric-transitive-access-wideners-v1: Fabric Transitive Access Wideners (v1) 6.3.2+56e78b9b04
+		fabricloader: Fabric Loader 0.16.9
+		java: OpenJDK 64-Bit Server VM 21
+		minecraft: Minecraft 1.21.4
+		mixinextras: MixinExtras 0.4.1
+	Launched Version: Fabric
+	Backend library: LWJGL version 3.3.3-snapshot
+	Backend API: NVIDIA GeForce RTX 3060/PCIe/SSE2 GL version 3.2.0 NVIDIA 560.94, NVIDIA Corporation
+	Window size: 854x480
+	GFLW Platform: win32
+	GL Caps: Using framebuffer using OpenGL 3.2
+	GL debug messages: 
+	Is Modded: Definitely; Client brand changed to 'fabric'; Server brand changed to 'fabric'
+	Universe: 400921fb54442d18
+	Type: Integrated Server (map_client.txt)
+	Graphics mode: fancy
+	Render Distance: 32/32 chunks
+	Resource Packs: vanilla, fabric, dyefulmod, fabric-api, fabric-api-base, fabric-api-lookup-api-v1, fabric-biome-api-v1, fabric-block-api-v1, fabric-block-view-api-v2, fabric-blockrenderlayer-v1, fabric-client-gametest-api-v1, fabric-client-tags-api-v1, fabric-command-api-v1, fabric-command-api-v2, fabric-commands-v0, fabric-content-registries-v0, fabric-convention-tags-v1, fabric-convention-tags-v2, fabric-crash-report-info-v1, fabric-data-attachment-api-v1, fabric-data-generation-api-v1, fabric-dimensions-v1, fabric-entity-events-v1, fabric-events-interaction-v0, fabric-game-rule-api-v1, fabric-gametest-api-v1, fabric-item-api-v1, fabric-item-group-api-v1, fabric-key-binding-api-v1, fabric-keybindings-v0, fabric-lifecycle-events-v1, fabric-loot-api-v2, fabric-loot-api-v3, fabric-message-api-v1, fabric-model-loading-api-v1, fabric-networking-api-v1, fabric-object-builder-api-v1, fabric-particles-v1, fabric-recipe-api-v1, fabric-registry-sync-v0, fabric-renderer-api-v1, fabric-renderer-indigo, fabric-rendering-data-attachment-v1, fabric-rendering-fluids-v1, fabric-rendering-v1, fabric-resource-conditions-api-v1, fabric-resource-loader-v0, fabric-screen-api-v1, fabric-screen-handler-api-v1, fabric-sound-api-v1, fabric-tag-api-v1, fabric-transfer-api-v1, fabric-transitive-access-wideners-v1, fabricloader, file/Default-Dark-Mode-1.20.2+-2024.6.0.zip (incompatible), file/No Vignette 1.21.zip (incompatible), file/NoBlurAndLowFire-1.21.zip (incompatible), file/RemoveFog_1.21~1.21.1-1.1.zip, file/Slightly-Improved-Font-1.1.4.zip, file/Toast-Blue-Totem
+	Current Language: en_us
+	Locale: en_US
+	System encoding: Cp1252
+	File encoding: UTF-8
+	CPU: 16x AMD Ryzen 7 5800X 8-Core Processor 
+	Server Running: true
+	Player Count: 1 / 8; [ServerPlayerEntity['Player1'/14, l='ServerLevel[Dyeful Testing]', x=17.76, y=71.26, z=143.27]]
+	Active Data Packs: vanilla, fabric, fabric-convention-tags-v2, fabric-gametest-api-v1
+	Available Data Packs: fabric, fabric-convention-tags-v2, fabric-gametest-api-v1, minecart_improvements, redstone_experiments, trade_rebalance, vanilla
+	Enabled Feature Flags: minecraft:vanilla
+	World Generation: Stable
+	World Seed: -6960200777885872756
+	Suppressed Exceptions: ~~NONE~~
