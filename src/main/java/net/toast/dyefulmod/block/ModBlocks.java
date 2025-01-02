@@ -1,7 +1,5 @@
 package net.toast.dyefulmod.block;
 
-import java.util.function.Function;
-
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.*;
 import net.minecraft.block.enums.NoteBlockInstrument;
@@ -47,27 +45,5 @@ public class ModBlocks {
             fabricItemGroupEntries.add(PASTEL_BLUE_CONCRETE);
             fabricItemGroupEntries.add(PASTEL_BLUE_CONCRETE_POWDER);
         });
-    }
-
-    public static Block register(RegistryKey<Block> key, Function<AbstractBlock.Settings, Block> factory, AbstractBlock.Settings settings) {
-        Block block = (Block)factory.apply(settings.registryKey(key));
-        return Registry.register(Registries.BLOCK, key, block);
-    }
-
-    private static RegistryKey<Block> keyOf(String id) {
-        return RegistryKey.of(RegistryKeys.BLOCK, Identifier.ofVanilla(id));
-    }
-
-    private static Block register(String id, Function<AbstractBlock.Settings, Block> factory, AbstractBlock.Settings settings) {
-        return register(keyOf(id), factory, settings);
-    }
-
-    static {
-        for (Block block : Registries.BLOCK) {
-            for (BlockState blockState : block.getStateManager().getStates()) {
-                Block.STATE_IDS.add(blockState);
-                blockState.initShapeCache();
-            }
-        }
     }
 }
