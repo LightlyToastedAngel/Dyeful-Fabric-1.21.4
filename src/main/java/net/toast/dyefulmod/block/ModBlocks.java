@@ -12,7 +12,6 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
-import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.toast.dyefulmod.Dyeful;
 
@@ -23,10 +22,10 @@ public class ModBlocks {
             new Block(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Dyeful.MOD_ID, "pastel_blue_concrete")))
                     .instrument(NoteBlockInstrument.BASEDRUM).requiresTool().strength(1.8F)));
 
-    public static final Block PASTEL_BLUE_CONCRETE_POWDER = register("pastel_blue_concrete_powder",
-            settings -> new ConcretePowderBlock(PASTEL_BLUE_CONCRETE, settings),
-            AbstractBlock.Settings.create().instrument(NoteBlockInstrument.SNARE).strength(0.5F).sounds(BlockSoundGroup.SAND)
-    );
+    public static final Block PASTEL_BLUE_CONCRETE_POWDER = registerBlock("pastel_blue_concrete_powder", new ConcretePowderBlock(PASTEL_BLUE_CONCRETE, AbstractBlock.Settings.create()
+            .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Dyeful.MOD_ID, "pastel_blue_concrete_powder")))
+            .instrument(NoteBlockInstrument.SNARE).strength(0.4F)
+    ));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
