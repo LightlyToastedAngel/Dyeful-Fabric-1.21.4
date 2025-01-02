@@ -1,7 +1,5 @@
 {
   "variants": {
-    "": {
-      "model": "dyefulmod:block/pastel_blue_concrete_powder"
-    }
+    "": { "model": "dyefulmod:block/pastel_blue_concrete_powder" }
   }
 }

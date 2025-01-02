@@ -11,7 +11,7 @@
 		"homepage": "",
 		"sources": "https://github.com/LightlyToastedAngel/Dyeful-Fabric-1.21.4"
 	},
-	"license": "MIT",
+	"license": "CC0 1.0 Universal",
 	"icon": "assets/dyefulmod/icon.png",
 	"environment": "*",
 	"entrypoints": {
