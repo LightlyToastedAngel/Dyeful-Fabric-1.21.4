@@ -2,5 +2,19 @@
   "item.dyefulmod.pastel_blue_dye": "Pastel Blue Dye",
 
   "block.dyefulmod.pastel_blue_concrete": "Pastel Blue Concrete",
-  "block.dyefulmod.pastel_blue_concrete_powder": "Pastel Blue Concrete Powder"
+  "block.dyefulmod.pastel_cyan_concrete": "Pastel Cyan Concrete",
+  "block.dyefulmod.pastel_green_concrete": "Pastel Green Concrete",
+  "block.dyefulmod.pastel_orange_concrete": "Pastel Orange Concrete",
+  "block.dyefulmod.pastel_pink_concrete": "Pastel Pink Concrete",
+  "block.dyefulmod.pastel_red_concrete": "Pastel Red Concrete",
+  "block.dyefulmod.pastel_violet_concrete": "Pastel Violet Concrete",
+  "block.dyefulmod.pastel_yellow_concrete": "Pastel Yellow Concrete",
+  "block.dyefulmod.pastel_blue_concrete_powder": "Pastel Blue Concrete Powder",
+  "block.dyefulmod.pastel_cyan_concrete_powder": "Pastel Cyan Concrete Powder",
+  "block.dyefulmod.pastel_green_concrete_powder": "Pastel Green Concrete Powder",
+  "block.dyefulmod.pastel_orange_concrete_powder": "Pastel Orange Concrete Powder",
+  "block.dyefulmod.pastel_pink_concrete_powder": "Pastel Pink Concrete Powder",
+  "block.dyefulmod.pastel_red_concrete_powder": "Pastel Red Concrete Powder",
+  "block.dyefulmod.pastel_violet_concrete_powder": "Pastel Violet Concrete Powder",
+  "block.dyefulmod.pastel_yellow_concrete_powder": "Pastel Yellow Concrete Powder"
 }

@@ -21,6 +21,27 @@ public class ModBlocks {
     public static final Block PASTEL_BLUE_CONCRETE = registerBlock("pastel_blue_concrete",
             new Block(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Dyeful.MOD_ID, "pastel_blue_concrete")))
                     .instrument(NoteBlockInstrument.BASEDRUM).requiresTool().strength(1.8F)));
+    public static final Block PASTEL_CYAN_CONCRETE = registerBlock("pastel_cyan_concrete",
+            new Block(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Dyeful.MOD_ID, "pastel_cyan_concrete")))
+                    .instrument(NoteBlockInstrument.BASEDRUM).requiresTool().strength(1.8F)));
+    public static final Block PASTEL_GREEN_CONCRETE = registerBlock("pastel_green_concrete",
+            new Block(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Dyeful.MOD_ID, "pastel_green_concrete")))
+                    .instrument(NoteBlockInstrument.BASEDRUM).requiresTool().strength(1.8F)));
+    public static final Block PASTEL_ORANGE_CONCRETE = registerBlock("pastel_orange_concrete",
+            new Block(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Dyeful.MOD_ID, "pastel_orange_concrete")))
+                    .instrument(NoteBlockInstrument.BASEDRUM).requiresTool().strength(1.8F)));
+    public static final Block PASTEL_PINK_CONCRETE = registerBlock("pastel_pink_concrete",
+            new Block(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Dyeful.MOD_ID, "pastel_pink_concrete")))
+                    .instrument(NoteBlockInstrument.BASEDRUM).requiresTool().strength(1.8F)));
+    public static final Block PASTEL_RED_CONCRETE = registerBlock("pastel_red_concrete",
+            new Block(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Dyeful.MOD_ID, "pastel_red_concrete")))
+                    .instrument(NoteBlockInstrument.BASEDRUM).requiresTool().strength(1.8F)));
+    public static final Block PASTEL_VIOLET_CONCRETE = registerBlock("pastel_violet_concrete",
+            new Block(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Dyeful.MOD_ID, "pastel_violet_concrete")))
+                    .instrument(NoteBlockInstrument.BASEDRUM).requiresTool().strength(1.8F)));
+    public static final Block PASTEL_YELLOW_CONCRETE = registerBlock("pastel_yellow_concrete",
+            new Block(AbstractBlock.Settings.create().registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Dyeful.MOD_ID, "pastel_yellow_concrete")))
+                    .instrument(NoteBlockInstrument.BASEDRUM).requiresTool().strength(1.8F)));
 
     //Concrete Powder Blocks
     public static final Block PASTEL_BLUE_CONCRETE_POWDER = registerBlock("pastel_blue_concrete_powder",
@@ -28,6 +49,41 @@ public class ModBlocks {
             .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Dyeful.MOD_ID, "pastel_blue_concrete_powder")))
             .instrument(NoteBlockInstrument.SNARE).strength(0.5F).sounds(BlockSoundGroup.SAND)
     ));
+    public static final Block PASTEL_CYAN_CONCRETE_POWDER = registerBlock("pastel_cyan_concrete_powder",
+            new ConcretePowderBlock(PASTEL_CYAN_CONCRETE, AbstractBlock.Settings.create()
+                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Dyeful.MOD_ID, "pastel_cyan_concrete_powder")))
+                    .instrument(NoteBlockInstrument.SNARE).strength(0.5F).sounds(BlockSoundGroup.SAND)
+            ));
+    public static final Block PASTEL_GREEN_CONCRETE_POWDER = registerBlock("pastel_green_concrete_powder",
+            new ConcretePowderBlock(PASTEL_GREEN_CONCRETE, AbstractBlock.Settings.create()
+                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Dyeful.MOD_ID, "pastel_green_concrete_powder")))
+                    .instrument(NoteBlockInstrument.SNARE).strength(0.5F).sounds(BlockSoundGroup.SAND)
+            ));
+    public static final Block PASTEL_ORANGE_CONCRETE_POWDER = registerBlock("pastel_orange_concrete_powder",
+            new ConcretePowderBlock(PASTEL_ORANGE_CONCRETE, AbstractBlock.Settings.create()
+                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Dyeful.MOD_ID, "pastel_orange_concrete_powder")))
+                    .instrument(NoteBlockInstrument.SNARE).strength(0.5F).sounds(BlockSoundGroup.SAND)
+            ));
+    public static final Block PASTEL_PINK_CONCRETE_POWDER = registerBlock("pastel_pink_concrete_powder",
+            new ConcretePowderBlock(PASTEL_PINK_CONCRETE, AbstractBlock.Settings.create()
+                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Dyeful.MOD_ID, "pastel_pink_concrete_powder")))
+                    .instrument(NoteBlockInstrument.SNARE).strength(0.5F).sounds(BlockSoundGroup.SAND)
+            ));
+    public static final Block PASTEL_RED_CONCRETE_POWDER = registerBlock("pastel_red_concrete_powder",
+            new ConcretePowderBlock(PASTEL_RED_CONCRETE, AbstractBlock.Settings.create()
+                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Dyeful.MOD_ID, "pastel_red_concrete_powder")))
+                    .instrument(NoteBlockInstrument.SNARE).strength(0.5F).sounds(BlockSoundGroup.SAND)
+            ));
+    public static final Block PASTEL_VIOLET_CONCRETE_POWDER = registerBlock("pastel_violet_concrete_powder",
+            new ConcretePowderBlock(PASTEL_VIOLET_CONCRETE, AbstractBlock.Settings.create()
+                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Dyeful.MOD_ID, "pastel_violet_concrete_powder")))
+                    .instrument(NoteBlockInstrument.SNARE).strength(0.5F).sounds(BlockSoundGroup.SAND)
+            ));
+    public static final Block PASTEL_YELLOW_CONCRETE_POWDER = registerBlock("pastel_yellow_concrete_powder",
+            new ConcretePowderBlock(PASTEL_YELLOW_CONCRETE, AbstractBlock.Settings.create()
+                    .registryKey(RegistryKey.of(RegistryKeys.BLOCK, Identifier.of(Dyeful.MOD_ID, "pastel_yellow_concrete_powder")))
+                    .instrument(NoteBlockInstrument.SNARE).strength(0.5F).sounds(BlockSoundGroup.SAND)
+            ));
 
 
     private static Block registerBlock(String name, Block block) {
@@ -48,7 +104,22 @@ public class ModBlocks {
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COLORED_BLOCKS).register(fabricItemGroupEntries -> {
             fabricItemGroupEntries.add(PASTEL_BLUE_CONCRETE);
+            fabricItemGroupEntries.add(PASTEL_CYAN_CONCRETE);
+            fabricItemGroupEntries.add(PASTEL_GREEN_CONCRETE);
+            fabricItemGroupEntries.add(PASTEL_ORANGE_CONCRETE);
+            fabricItemGroupEntries.add(PASTEL_PINK_CONCRETE);
+            fabricItemGroupEntries.add(PASTEL_RED_CONCRETE);
+            fabricItemGroupEntries.add(PASTEL_VIOLET_CONCRETE);
+            fabricItemGroupEntries.add(PASTEL_YELLOW_CONCRETE);
+
             fabricItemGroupEntries.add(PASTEL_BLUE_CONCRETE_POWDER);
+            fabricItemGroupEntries.add(PASTEL_CYAN_CONCRETE_POWDER);
+            fabricItemGroupEntries.add(PASTEL_GREEN_CONCRETE_POWDER);
+            fabricItemGroupEntries.add(PASTEL_ORANGE_CONCRETE_POWDER);
+            fabricItemGroupEntries.add(PASTEL_PINK_CONCRETE_POWDER);
+            fabricItemGroupEntries.add(PASTEL_RED_CONCRETE_POWDER);
+            fabricItemGroupEntries.add(PASTEL_VIOLET_CONCRETE_POWDER);
+            fabricItemGroupEntries.add(PASTEL_YELLOW_CONCRETE_POWDER);
         });
     }
 }

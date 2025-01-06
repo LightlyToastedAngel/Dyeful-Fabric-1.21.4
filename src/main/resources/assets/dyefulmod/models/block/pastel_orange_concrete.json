@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "dyefulmod:block/pastel_orange_concrete"
+  }
+}
